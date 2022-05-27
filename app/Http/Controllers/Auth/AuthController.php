@@ -23,7 +23,7 @@ class AuthController extends Controller
 
         $validate_data = [
             'name' => 'required|string|min:4',
-            'email' => 'required|email',
+            'email' => 'required|email|unique:users',
             'password' => 'required|min:8',
         ];
 
